@@ -1,0 +1,19 @@
+[ req ]
+prompt = no
+default_md = sha256
+distinguished_name = dn
+req_extensions = v3_req
+
+[ dn ]
+CN = Niklas Andersson
+C = ES
+ST = Andalucía 
+L = Málaga
+O = Abertura AB
+OU = Research & Development 
+emailAddress = rnd@openforce.se
+
+[ v3_req ]
+basicConstraints = CA:FALSE
+keyUsage = digitalSignature, nonRepudiation, keyEncipherment, dataEncipherment, keyAgreement
+nsCertType = client
