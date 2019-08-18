@@ -61,11 +61,11 @@ Setup
 
 .. code:: bash
 
-  $ for name in alice bob; do openssl req -x509 -newkey rsa:2048 -pubkey -keyout ${name}.pem -out ${name}.crt -nodes -subj "/CN=ES/ST=Andalucia/L=Malaga/O=Openforce AB/OU=Research & Development/CN=${name}"; done
+  $ for name in alice bob; do openssl req -x509 -newkey rsa:2048 -keyout ${name}.pem -out ${name}.crt -nodes -subj "/C=ES/ST=Andalucia/L=Malaga/O=Openforce AB/OU=Research & Development/CN=${name}"; done
 
 
-  $ openssl req -x509 -newkey rsa:2048 -pubkey -keyout alice.pem -out alice.crt -nodes -subj "/CN=ES/ST=Andalucia/L=Malaga/O=Openforce AB/OU=Research & Development/CN=alice"
-  $ openssl req -x509 -newkey rsa:2048 -pubkey -keyout bob.pem -out bob.crt -nodes -subj "/CN=ES/ST=Andalucia/L=Malaga/O=Openforce AB/OU=Research & Development/CN=bob"
+  $ openssl req -x509 -newkey rsa:2048 -keyout alice.pem -out alice.crt -nodes -subj "/C=ES/ST=Andalucia/L=Malaga/O=Openforce AB/OU=Research & Development/CN=alice"
+  $ openssl req -x509 -newkey rsa:2048 -keyout bob.pem -out bob.crt -nodes -subj "/C=ES/ST=Andalucia/L=Malaga/O=Openforce AB/OU=Research & Development/CN=bob"
   # Test Message
   $ echo "Hi Alice, this is Bob" > bob2alice.txt
 
