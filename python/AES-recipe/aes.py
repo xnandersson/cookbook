@@ -11,7 +11,7 @@ def encryption(privateInfo):
     EncodeAES = lambda c, s: base64.b64encode(c.encrypt(pad(s)))
 
     secret = os.urandom(BLOCK_SIZE)
-    print('encryption key: {}'.format(secret))
+    print('encryption key: {}'.format(base64.b64encode(secret)))
 
     cipher = AES.new(secret)
 
